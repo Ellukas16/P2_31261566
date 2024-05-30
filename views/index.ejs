@@ -1,81 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
     <link rel='stylesheet' href='/stylesheets/style.css'>
-  </head>
-  <body>
+
+
+
+
+
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS76Y67BNF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XS76Y67BNF');
+    </script>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer>
+    </script>
+
+</head>
+
+<body>
     <div>
-      <img src="/images/foto.jpg" alt="2x2" width="120" height="120">
-      <h1> Andrés Eduardo Flores Pedrique</h1>
-      <p> Calle Urdaneta #38, La Coromoto, Villa De Cura</p>
-      <p> Telefono: +58 0412-1333-391</p>
-      <fieldset>
-          <legend> Datos Generales</legend>
-          <ul>
-              <li> <span>Fecha De Nacimiento:</span> 09/08/2003</li>
-              <li> <span>Cedula:</span> 31.261.566</li>
-              <li> <span>Correo electronico </span> miguelangelo.fl2011@gmail.com </li>
-          </ul>
-      </fieldset>
-      <p class=“border contenedor”></p>
-      <fieldset>
-          <legend>Formacion Académica</legend>
-          <ul>
-              <li>Bachiller: Juan De Bolivar Y Villegas</li>
-              <li>Estudiante Del Area Ingeneria Informatica De San Juan De los Morros</li>
-          </ul>
-      </fieldset>
-      <p class=“border contenedor”></p>
-      <fieldset>
-          <legend>Experiencia Laboral</legend>
-          <li>Diseñador Grafico </li>
-          <li>Respostero</li>
-      </fieldset>
-      <p class=“border contenedor”></p>
-      <fieldset>
-          <legend>Redes Sociales</legend>
-          <lil>Facebook: https://www.facebook.com/andres.flores.140 </lil>
-          </br> 
-          <lil>Instagram: https://www.instagram.com/g2nald/ </lil>
-      </fieldset>
-      <p class=“border contenedor”></p>
-      <fieldset>
-          <legend>Habilidades Y Destrezas</legend>
-          <lil>Tengo variedad de habilidades como programador que voy mejorando cada dia estudiandola y practicandola,
-              mas que todo le se mejor al diseño grafico. </lil>
-      </fieldset>
-      <p class=“border contenedor”></p>
-      <fieldset>
-          <legend>Otra Informacion</legend>
-          <lil>Me gusta mucho aprender a programar y me ha llamado la atención desde mucho y quiero seguir mejorando en eso.</lil>
-      </fieldset>
-      <fieldset>
-        <form action="/enviar" method="POST"> <br>
-            <label for="">
-                Nombre
-            </label><br>
-            <input type="text" name="nombre"><br>
-            <label for="">
-                Correo
-            </label><br>
-            <input type="text"name="correo"><br>
-            <label for="">
-                Comentario
-            </label><br>
-            <textarea name="comentario" id=""></textarea><br>
-            <button>Enviar</button>
-        </form>
-      </fieldset>
-  </div>
-  </body>
+        <img src="/images/foto.jpg" alt="2x2" width="120" height="120">
+        <h1> Andrés Eduardo Flores Pedrique</h1>
+        <p> Calle Urdaneta #38, La Coromoto, Villa De Cura</p>
+        <p> Telefono: +58 0412-1333-391</p>
+        <fieldset>
+            <legend> Datos Generales</legend>
+            <ul>
+                <li> <span>Fecha De Nacimiento:</span> 09/08/2003</li>
+                <li> <span>Cedula:</span> 31.261.566</li>
+                <li> <span>Correo electronico </span> miguelangelo.fl2011@gmail.com </li>
+            </ul>
+        </fieldset>
+        <p class=“border contenedor”></p>
+        <fieldset>
+            <legend>Formacion Académica</legend>
+            <ul>
+                <li>Bachiller: Juan De Bolivar Y Villegas</li>
+                <li>Estudiante Del Area Ingeneria Informatica De San Juan De los Morros</li>
+            </ul>
+        </fieldset>
+        <p class=“border contenedor”></p>
+        <fieldset>
+            <legend>Experiencia Laboral</legend>
+            <li>Diseñador Grafico </li>
+            <li>Respostero</li>
+        </fieldset>
+        <p class=“border contenedor”></p>
+        <fieldset>
+            <legend>Redes Sociales</legend>
+            <lil>Facebook: https://www.facebook.com/andres.flores.140 </lil>
+            </br>
+            <lil>Instagram: https://www.instagram.com/g2nald/ </lil>
+        </fieldset>
+        <p class=“border contenedor”></p>
+        <fieldset>
+            <legend>Habilidades Y Destrezas</legend>
+            <lil>Tengo variedad de habilidades como programador que voy mejorando cada dia estudiandola y practicandola,
+                mas que todo le se mejor al diseño grafico. </lil>
+        </fieldset>
+        <p class=“border contenedor”></p>
+        <fieldset>
+            <legend>Otra Informacion</legend>
+            <lil>Me gusta mucho aprender a programar y me ha llamado la atención desde mucho y quiero seguir mejorando
+                en eso.</lil>
+        </fieldset>
+            <form action="/enviar" method="POST"> <br>
+                <label for="">
+                    Nombre
+                </label><br>
+                <input type="text" name="nombre"><br>
+                <label for="">
+                    Correo
+                </label><br>
+                <input type="text" name="correo"><br>
+                <label for="">
+                    Comentario
+                </label><br>
+                <textarea name="comentario" id=""></textarea><br>
+
+                <div class="g-recaptcha" data-sitekey="<%= GKEYPUBLIC %>"></div>
+
+                <button>Enviar</button>
+            </form>
+         
+    </div>
+</body>
+
 </html>
 
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="en">
 
-
-
-
-
-
+</html>

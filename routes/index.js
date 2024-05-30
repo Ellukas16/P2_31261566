@@ -48,8 +48,8 @@ class ContactosController {
 
     try {
 
-      const pais = "http://ip-api.com/json/" + ip
-
+      const responseCountry = "http://ip-api.com/json/" + ip
+      const pais = responseCountry.country
 
       const re = await fetch(options, { method: "post", });
       const json = await re.json();

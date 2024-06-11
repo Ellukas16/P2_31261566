@@ -9,7 +9,7 @@ module.exports.configGoogle = () =>{
     passport.use(
       new GoogleStrategy(
         {
-          clientID: process.env.GOOGLEid,
+              clientID: process.env.GOOGLEID,
           clientSecret: process.env.GOOGLESECRET,
           callbackURL: "https://p2-31261566.onrender.com/google/callback",
           passReqToCallback: true

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>Contactos</h1> <a href="/logout">Cerrar sesión</a>
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">Correo</th>
+                <th scope="col" class="px-6 py-3">Nombre</th>
+                <th scope="col" class="px-6 py-3" >Comentario</th>
+                <th scope="col" class="px-6 py-3">IP</th>
+                <th scope="col" class="px-6 py-3">Fecha</th>
+                <th scope="col" class="px-6 py-3">Pais</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (const client of get) { %>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                  <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"><%= client.correo%></td>
+                  <td class="px-6 py-4"><%= client.nombre%></td>
+                  <td class="px-6 py-4"><%= client.comentario%></td>
+                  <td class="px-6 py-4"><%= client.ip%></td>
+                  <td class="px-6 py-4"><%= client.fecha%></td>
+                  <td class="px-6 py-4"><%= client.pais%></td>
+                </tr>
+                <% } %>
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -8,7 +8,10 @@
     <link rel='stylesheet' href='/stylesheets/style.css'>
 
 
-
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
 
 
 
@@ -75,25 +78,25 @@
             <lil>Me gusta mucho aprender a programar y me ha llamado la atención desde mucho y quiero seguir mejorando
                 en eso.</lil>
         </fieldset>
-            <form action="/enviar" method="POST"> <br>
-                <label for="">
-                    Nombre
-                </label><br>
-                <input type="text" name="nombre"><br>
-                <label for="">
-                    Correo
-                </label><br>
-                <input type="text" name="correo"><br>
-                <label for="">
-                    Comentario
-                </label><br>
-                <textarea name="comentario" id=""></textarea><br>
+        <form action="/enviar" method="POST"> <br>
+            <label for="">
+                Nombre
+            </label><br>
+            <input type="text" name="nombre"><br>
+            <label for="">
+                Correo
+            </label><br>
+            <input type="text" name="correo"><br>
+            <label for="">
+                Comentario
+            </label><br>
+            <textarea name="comentario" id=""></textarea><br>
 
-                <div class="g-recaptcha" data-sitekey="<%= GKEYPUBLIC %>"></div>
+            <div class="g-recaptcha" data-sitekey="<%= GKEYPUBLIC %>"></div>
 
-                <button>Enviar</button>
-            </form>
-         
+            <button>Enviar</button>
+        </form>
+
     </div>
 </body>
 
